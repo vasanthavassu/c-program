@@ -1,0 +1,73 @@
+#include<stdio.h>
+
+int partition(int a[],int low,int high)
+{
+	int pivot=a[low];
+	int start=low;
+	int end=high;
+	int t,t1;
+	while(start<end)
+	{
+		while(a[start]<=pivot)
+		start++;
+		while(a[end]>pivot)
+		end--;
+		if(start<end) // swap(a[start],a[end]);
+		{
+			t=a[start];
+			a[start]=a[end];
+			a[end]=t;
+		}
+			
+	}
+	
+	if(start>end)//swap(a[low],a[end]);
+	{
+	t1=a[low];
+	a[low]=a[end];
+	a[end]=t1;
+	}
+	
+	return end;	
+}
+void qsort(int a[],int low,int high)
+{
+	int part;
+	if(low<high)
+	{
+		part=partition(a,low,high);// partition algorithm will decide partition position
+		qsort(a,low,part-1);// left part and it is recursive call
+		qsort(a,part+1,high);// right part and it is recursive call
+		
+	}
+}
+
+void main()
+{
+	int a[100];
+	int size,i;
+	
+	printf("\n enter how many elements \n");
+	scanf("%d",&size);
+	
+	printf("\n Enter elements \n");
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	
+	printf("\n Before sorting \n");
+	for(i=0;i<size;i++)
+	{
+		printf("%d \t",a[i]);
+	}
+	
+	qsort(a,0,size-1);// quick sort function call 
+	
+	printf("\n After sorting \n");
+	for(i=0;i<size;i++)
+	{
+		printf("%d \t",a[i]);
+	}
+	
+}
