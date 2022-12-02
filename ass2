@@ -1,0 +1,30 @@
+way-1
+def eligibilityofvote(age)
+  if(age>=18):
+  print('yes')
+ else:
+   print('no')
+n=int(input())
+ eligibilityofvote(age)
+ 
+ way-2
+ def eligibilityofvote(age)
+  if(age>=18):
+  return'yes'
+  else:
+  return'no'
+  n=int(input())
+  print('vote')
+  eligibilityofvote(age)
+  
+  way-3
+  def eligibilityof(age)
+   if(age>=18):
+   return'true'
+   else:
+   return'false'
+  n=int(input())
+  if eligiblityofvote(age):
+  print('yes')
+  else:
+  print('no')
