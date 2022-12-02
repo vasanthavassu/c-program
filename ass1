@@ -1,0 +1,32 @@
+way-1
+def bigwono(a,b)
+if a>b:
+  print('a is big')
+  else:
+  peint('b is big')
+a=int(input())
+b=int(input())
+  bigwono(a,b)
+  
+  way-2
+  def bigwono(a,b)
+  if a>b:
+   return'a'
+  else:
+   return'b;
+ a=int(input())
+ b=int(input())
+   bigwono(a,b)
+   
+   way-3
+   def bigwono(a,b)
+   if a>b:
+   return'true'
+  else:
+   return'false'
+ a=int(input())
+ b=int(input())
+ if bigwono(a,b)
+ print('a is big')
+ else:
+ print('b is big')
